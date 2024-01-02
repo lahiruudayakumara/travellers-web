@@ -9,15 +9,16 @@ const bookmarksSlice = createSlice({
     initialState,
     reducers: {
         addBookmarks: (state, action) => {
-            
+            return { destination: [...state.destination, {...action.payload, amount: 1,}]}           
         },
         removeBookmarks: (state, action) => {
-
+            const bookmarkToRemove = action.payload; // Assuming payload contains the bookmark to be removed
+            return { destination: state.destination.filter(bookmark => bookmark.id !== bookmarkToRemove.id) };
         }
     }
 })
 
+export const userBookmarks = state => state.bookmarks.destination;
 export const { addBookmarks, removeBookmarks } = bookmarksSlice.actions;
-export const userBookmarks = (state) => state.bookmarks.destination;
 
-export default userBookmarks.reducer;
+export default bookmarksSlice.reducer;
