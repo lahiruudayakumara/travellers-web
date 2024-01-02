@@ -5,9 +5,7 @@ import bookmarksReducer from "./slices/bookmarksSlice";
 const Reducer = combineReducers(
     {
         users: userReducer,
-    },
-    {
-        bookmarks: bookmarksReducer
+        bookmarks: bookmarksReducer,
     }
 );
 
