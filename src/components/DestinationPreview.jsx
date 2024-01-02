@@ -24,7 +24,7 @@ const DestinationPreview = ({destination, icon}) => {
             </div>
             <div className='flex justify-between items-center text-blue'>
                 <p className='text-brown font-semibold'>{destination.country}</p>
-                {icon == true? null :
+                {icon === true? null :
                 <div
                     onClick={addBookMarks} 
                     className='hover:shadow-md hover:rounded-full cursor-pointer p-1'>

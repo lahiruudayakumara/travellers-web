@@ -1,17 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Mousewheel, Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/grid';
-import 'swiper/css/pagination';
 import DestinationPreview from './DestinationPreview';
 import { useEffect, useState } from 'react';
 import { db } from '../firebase/Firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import { useDispatch } from 'react-redux';
+
+import 'swiper/css';
+import 'swiper/css/grid';
+import 'swiper/css/pagination';
 
 const Destination = () => {
-    const dispatch = useDispatch();
     const [destination, setDestination] = useState([]);
 
     useEffect(() => {
