@@ -19,7 +19,9 @@ const Home = () => {
         <Hero />
         <Destination />
         <Review />
-        <About />
+        <section id="about">
+          <About />
+        </section>
     </div>
   )
 }

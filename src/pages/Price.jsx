@@ -23,7 +23,9 @@ export const Price = () => {
         <p className="text-gray">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <div className="flex flex-wrap mt-6">
         {priceList.map((list, index) => (
-            <div className="shadow-md rounded-md w-80 m-auto hover:cursor-pointer hover:shadow-blue my-5">
+            <div
+                key={index} 
+                className="shadow-md rounded-md w-80 m-auto hover:cursor-pointer hover:shadow-blue my-5">
                 <div className="bg-blue rounded-t-md text-center text-white p-2">
                     <h3 className="text-xl">{list.type}</h3>
                     <h1 className="text-2xl">{list.price}</h1>
